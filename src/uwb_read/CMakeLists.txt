@@ -103,9 +103,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES uwb_read
-#  CATKIN_DEPENDS my_msgs roscpp std_msgs
+ INCLUDE_DIRS include
+ LIBRARIES uwb_lib
+ CATKIN_DEPENDS my_msgs roscpp std_msgs
 #  DEPENDS system_lib
 )
 
@@ -116,7 +116,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  # include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -150,8 +150,13 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
-add_executable(uwb_read src/uwb_read.cpp)
-target_link_libraries(uwb_read ${catkin_LIBRARIES})
+add_library(uwb_lib lib.cpp);
+target_include_directories(uwb_lib PUBLIC include ${catkin_INCLUDE_DIRS})
+# 因为是PUBLIC, 如果后续有可执行文件链接uwb_lib的话，相当于INCLUDE它的头文件
+target_link_libraries(uwb_lib ${catkin_LIBRARIES});
+
+add_executable(uwb_read_node src/uwb_read.cpp)
+target_link_libraries(uwb_read_node PRIVATE ${catkin_LIBRARIES} uwb_lib)
 
 #############
 ## Install ##

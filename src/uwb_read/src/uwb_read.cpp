@@ -6,13 +6,19 @@
 #include <cstring>
 #include <iostream>
 
+#include <my_msgs/uwb_type.h>
+#include <uwb_read/lib.hpp>
+
 int main(int argc, char** argv)
 {
     // 1. ROS 初始化
     ros::init(argc, argv, "read_uwb_node");
     ros::NodeHandle nh;
 
-    // 2. 打开串口
+    // 2.创建一个发送 <my_msgs/uwb_type> 的 publisher
+    ros::Publisher pub = nh.advertise<my_msgs::uwb_type>("uwb_data", 10);
+
+    // 3. 打开串口
     const char* port = "/dev/ttyUSB0";
     int fd = open(port, O_RDWR | O_NOCTTY | O_NDELAY);
 
@@ -65,8 +71,24 @@ int main(int argc, char** argv)
 
         if (n > 0)
         {
-            // 直接打印原始数据
-            ROS_INFO_STREAM("UWB raw data: " << buffer);
+            std::string s(buffer);
+
+            double a = 0.0, d = 0.0;
+            bool ok_a = extractDoubleField(s, "a", a);
+            bool ok_d = extractDoubleField(s, "d", d);
+
+            if (ok_a && ok_d)
+            {
+                my_msgs::uwb_type msg;
+                msg.angle = a;
+                msg.distance = d;
+
+                pub.publish(msg);
+            }
+            else
+            {
+                ROS_WARN("Failed to extract fields from: %s", s.c_str());
+            }
         }
 
         ros::spinOnce();
