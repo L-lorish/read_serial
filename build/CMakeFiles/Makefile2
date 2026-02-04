@@ -184,7 +184,8 @@ my_msgs/clean: my_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 # Directory level rules for directory uwb_read
 
 # Recursive "all" directory target.
-uwb_read/all: uwb_read/CMakeFiles/uwb_read.dir/all
+uwb_read/all: uwb_read/CMakeFiles/uwb_read_node.dir/all
+uwb_read/all: uwb_read/CMakeFiles/uwb_lib.dir/all
 
 .PHONY : uwb_read/all
 
@@ -194,7 +195,8 @@ uwb_read/preinstall:
 .PHONY : uwb_read/preinstall
 
 # Recursive "clean" directory target.
-uwb_read/clean: uwb_read/CMakeFiles/uwb_read.dir/clean
+uwb_read/clean: uwb_read/CMakeFiles/uwb_read_node.dir/clean
+uwb_read/clean: uwb_read/CMakeFiles/uwb_lib.dir/clean
 
 .PHONY : uwb_read/clean
 
@@ -1208,31 +1210,58 @@ my_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
 .PHONY : my_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target uwb_read/CMakeFiles/uwb_read.dir
+# Target rules for target uwb_read/CMakeFiles/uwb_read_node.dir
 
 # All Build rule for target.
-uwb_read/CMakeFiles/uwb_read.dir/all:
-	$(MAKE) -f uwb_read/CMakeFiles/uwb_read.dir/build.make uwb_read/CMakeFiles/uwb_read.dir/depend
-	$(MAKE) -f uwb_read/CMakeFiles/uwb_read.dir/build.make uwb_read/CMakeFiles/uwb_read.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/linyuan/experiment/read_serial/build/CMakeFiles --progress-num=16,17 "Built target uwb_read"
-.PHONY : uwb_read/CMakeFiles/uwb_read.dir/all
+uwb_read/CMakeFiles/uwb_read_node.dir/all: uwb_read/CMakeFiles/uwb_lib.dir/all
+	$(MAKE) -f uwb_read/CMakeFiles/uwb_read_node.dir/build.make uwb_read/CMakeFiles/uwb_read_node.dir/depend
+	$(MAKE) -f uwb_read/CMakeFiles/uwb_read_node.dir/build.make uwb_read/CMakeFiles/uwb_read_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/linyuan/experiment/read_serial/build/CMakeFiles --progress-num=18,19 "Built target uwb_read_node"
+.PHONY : uwb_read/CMakeFiles/uwb_read_node.dir/all
 
 # Build rule for subdir invocation for target.
-uwb_read/CMakeFiles/uwb_read.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/linyuan/experiment/read_serial/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 uwb_read/CMakeFiles/uwb_read.dir/all
+uwb_read/CMakeFiles/uwb_read_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/linyuan/experiment/read_serial/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 uwb_read/CMakeFiles/uwb_read_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/linyuan/experiment/read_serial/build/CMakeFiles 0
-.PHONY : uwb_read/CMakeFiles/uwb_read.dir/rule
+.PHONY : uwb_read/CMakeFiles/uwb_read_node.dir/rule
 
 # Convenience name for target.
-uwb_read: uwb_read/CMakeFiles/uwb_read.dir/rule
+uwb_read_node: uwb_read/CMakeFiles/uwb_read_node.dir/rule
 
-.PHONY : uwb_read
+.PHONY : uwb_read_node
 
 # clean rule for target.
-uwb_read/CMakeFiles/uwb_read.dir/clean:
-	$(MAKE) -f uwb_read/CMakeFiles/uwb_read.dir/build.make uwb_read/CMakeFiles/uwb_read.dir/clean
-.PHONY : uwb_read/CMakeFiles/uwb_read.dir/clean
+uwb_read/CMakeFiles/uwb_read_node.dir/clean:
+	$(MAKE) -f uwb_read/CMakeFiles/uwb_read_node.dir/build.make uwb_read/CMakeFiles/uwb_read_node.dir/clean
+.PHONY : uwb_read/CMakeFiles/uwb_read_node.dir/clean
+
+#=============================================================================
+# Target rules for target uwb_read/CMakeFiles/uwb_lib.dir
+
+# All Build rule for target.
+uwb_read/CMakeFiles/uwb_lib.dir/all:
+	$(MAKE) -f uwb_read/CMakeFiles/uwb_lib.dir/build.make uwb_read/CMakeFiles/uwb_lib.dir/depend
+	$(MAKE) -f uwb_read/CMakeFiles/uwb_lib.dir/build.make uwb_read/CMakeFiles/uwb_lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/linyuan/experiment/read_serial/build/CMakeFiles --progress-num=16,17 "Built target uwb_lib"
+.PHONY : uwb_read/CMakeFiles/uwb_lib.dir/all
+
+# Build rule for subdir invocation for target.
+uwb_read/CMakeFiles/uwb_lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/linyuan/experiment/read_serial/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 uwb_read/CMakeFiles/uwb_lib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/linyuan/experiment/read_serial/build/CMakeFiles 0
+.PHONY : uwb_read/CMakeFiles/uwb_lib.dir/rule
+
+# Convenience name for target.
+uwb_lib: uwb_read/CMakeFiles/uwb_lib.dir/rule
+
+.PHONY : uwb_lib
+
+# clean rule for target.
+uwb_read/CMakeFiles/uwb_lib.dir/clean:
+	$(MAKE) -f uwb_read/CMakeFiles/uwb_lib.dir/build.make uwb_read/CMakeFiles/uwb_lib.dir/clean
+.PHONY : uwb_read/CMakeFiles/uwb_lib.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

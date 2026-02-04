@@ -168,19 +168,61 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-uwb_read/CMakeFiles/uwb_read.dir/rule:
-	cd /home/linyuan/experiment/read_serial/build && $(MAKE) -f CMakeFiles/Makefile2 uwb_read/CMakeFiles/uwb_read.dir/rule
-.PHONY : uwb_read/CMakeFiles/uwb_read.dir/rule
+uwb_read/CMakeFiles/uwb_read_node.dir/rule:
+	cd /home/linyuan/experiment/read_serial/build && $(MAKE) -f CMakeFiles/Makefile2 uwb_read/CMakeFiles/uwb_read_node.dir/rule
+.PHONY : uwb_read/CMakeFiles/uwb_read_node.dir/rule
 
 # Convenience name for target.
-uwb_read: uwb_read/CMakeFiles/uwb_read.dir/rule
+uwb_read_node: uwb_read/CMakeFiles/uwb_read_node.dir/rule
 
-.PHONY : uwb_read
+.PHONY : uwb_read_node
 
 # fast build rule for target.
-uwb_read/fast:
-	cd /home/linyuan/experiment/read_serial/build && $(MAKE) -f uwb_read/CMakeFiles/uwb_read.dir/build.make uwb_read/CMakeFiles/uwb_read.dir/build
-.PHONY : uwb_read/fast
+uwb_read_node/fast:
+	cd /home/linyuan/experiment/read_serial/build && $(MAKE) -f uwb_read/CMakeFiles/uwb_read_node.dir/build.make uwb_read/CMakeFiles/uwb_read_node.dir/build
+.PHONY : uwb_read_node/fast
+
+# Convenience name for target.
+uwb_read/CMakeFiles/uwb_lib.dir/rule:
+	cd /home/linyuan/experiment/read_serial/build && $(MAKE) -f CMakeFiles/Makefile2 uwb_read/CMakeFiles/uwb_lib.dir/rule
+.PHONY : uwb_read/CMakeFiles/uwb_lib.dir/rule
+
+# Convenience name for target.
+uwb_lib: uwb_read/CMakeFiles/uwb_lib.dir/rule
+
+.PHONY : uwb_lib
+
+# fast build rule for target.
+uwb_lib/fast:
+	cd /home/linyuan/experiment/read_serial/build && $(MAKE) -f uwb_read/CMakeFiles/uwb_lib.dir/build.make uwb_read/CMakeFiles/uwb_lib.dir/build
+.PHONY : uwb_lib/fast
+
+src/lib.o: src/lib.cpp.o
+
+.PHONY : src/lib.o
+
+# target to build an object file
+src/lib.cpp.o:
+	cd /home/linyuan/experiment/read_serial/build && $(MAKE) -f uwb_read/CMakeFiles/uwb_lib.dir/build.make uwb_read/CMakeFiles/uwb_lib.dir/src/lib.cpp.o
+.PHONY : src/lib.cpp.o
+
+src/lib.i: src/lib.cpp.i
+
+.PHONY : src/lib.i
+
+# target to preprocess a source file
+src/lib.cpp.i:
+	cd /home/linyuan/experiment/read_serial/build && $(MAKE) -f uwb_read/CMakeFiles/uwb_lib.dir/build.make uwb_read/CMakeFiles/uwb_lib.dir/src/lib.cpp.i
+.PHONY : src/lib.cpp.i
+
+src/lib.s: src/lib.cpp.s
+
+.PHONY : src/lib.s
+
+# target to generate assembly for a file
+src/lib.cpp.s:
+	cd /home/linyuan/experiment/read_serial/build && $(MAKE) -f uwb_read/CMakeFiles/uwb_lib.dir/build.make uwb_read/CMakeFiles/uwb_lib.dir/src/lib.cpp.s
+.PHONY : src/lib.cpp.s
 
 src/uwb_read.o: src/uwb_read.cpp.o
 
@@ -188,7 +230,7 @@ src/uwb_read.o: src/uwb_read.cpp.o
 
 # target to build an object file
 src/uwb_read.cpp.o:
-	cd /home/linyuan/experiment/read_serial/build && $(MAKE) -f uwb_read/CMakeFiles/uwb_read.dir/build.make uwb_read/CMakeFiles/uwb_read.dir/src/uwb_read.cpp.o
+	cd /home/linyuan/experiment/read_serial/build && $(MAKE) -f uwb_read/CMakeFiles/uwb_read_node.dir/build.make uwb_read/CMakeFiles/uwb_read_node.dir/src/uwb_read.cpp.o
 .PHONY : src/uwb_read.cpp.o
 
 src/uwb_read.i: src/uwb_read.cpp.i
@@ -197,7 +239,7 @@ src/uwb_read.i: src/uwb_read.cpp.i
 
 # target to preprocess a source file
 src/uwb_read.cpp.i:
-	cd /home/linyuan/experiment/read_serial/build && $(MAKE) -f uwb_read/CMakeFiles/uwb_read.dir/build.make uwb_read/CMakeFiles/uwb_read.dir/src/uwb_read.cpp.i
+	cd /home/linyuan/experiment/read_serial/build && $(MAKE) -f uwb_read/CMakeFiles/uwb_read_node.dir/build.make uwb_read/CMakeFiles/uwb_read_node.dir/src/uwb_read.cpp.i
 .PHONY : src/uwb_read.cpp.i
 
 src/uwb_read.s: src/uwb_read.cpp.s
@@ -206,7 +248,7 @@ src/uwb_read.s: src/uwb_read.cpp.s
 
 # target to generate assembly for a file
 src/uwb_read.cpp.s:
-	cd /home/linyuan/experiment/read_serial/build && $(MAKE) -f uwb_read/CMakeFiles/uwb_read.dir/build.make uwb_read/CMakeFiles/uwb_read.dir/src/uwb_read.cpp.s
+	cd /home/linyuan/experiment/read_serial/build && $(MAKE) -f uwb_read/CMakeFiles/uwb_read_node.dir/build.make uwb_read/CMakeFiles/uwb_read_node.dir/src/uwb_read.cpp.s
 .PHONY : src/uwb_read.cpp.s
 
 # Help Target
@@ -222,7 +264,11 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... uwb_read"
+	@echo "... uwb_read_node"
+	@echo "... uwb_lib"
+	@echo "... src/lib.o"
+	@echo "... src/lib.i"
+	@echo "... src/lib.s"
 	@echo "... src/uwb_read.o"
 	@echo "... src/uwb_read.i"
 	@echo "... src/uwb_read.s"

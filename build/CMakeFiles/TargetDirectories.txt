@@ -77,4 +77,5 @@
 /home/linyuan/experiment/read_serial/build/uwb_read/CMakeFiles/rebuild_cache.dir
 /home/linyuan/experiment/read_serial/build/uwb_read/CMakeFiles/edit_cache.dir
 /home/linyuan/experiment/read_serial/build/uwb_read/CMakeFiles/test.dir
-/home/linyuan/experiment/read_serial/build/uwb_read/CMakeFiles/uwb_read.dir
+/home/linyuan/experiment/read_serial/build/uwb_read/CMakeFiles/uwb_read_node.dir
+/home/linyuan/experiment/read_serial/build/uwb_read/CMakeFiles/uwb_lib.dir

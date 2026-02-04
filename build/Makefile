@@ -649,17 +649,30 @@ rosgraph_msgs_generate_messages_cpp/fast:
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named uwb_read
+# Target rules for targets named uwb_read_node
 
 # Build rule for target.
-uwb_read: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 uwb_read
-.PHONY : uwb_read
+uwb_read_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uwb_read_node
+.PHONY : uwb_read_node
 
 # fast build rule for target.
-uwb_read/fast:
-	$(MAKE) -f uwb_read/CMakeFiles/uwb_read.dir/build.make uwb_read/CMakeFiles/uwb_read.dir/build
-.PHONY : uwb_read/fast
+uwb_read_node/fast:
+	$(MAKE) -f uwb_read/CMakeFiles/uwb_read_node.dir/build.make uwb_read/CMakeFiles/uwb_read_node.dir/build
+.PHONY : uwb_read_node/fast
+
+#=============================================================================
+# Target rules for targets named uwb_lib
+
+# Build rule for target.
+uwb_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uwb_lib
+.PHONY : uwb_lib
+
+# fast build rule for target.
+uwb_lib/fast:
+	$(MAKE) -f uwb_read/CMakeFiles/uwb_lib.dir/build.make uwb_read/CMakeFiles/uwb_lib.dir/build
+.PHONY : uwb_lib/fast
 
 # Help Target
 help:
@@ -711,7 +724,8 @@ help:
 	@echo "... my_msgs_generate_messages_py"
 	@echo "... my_msgs_genpy"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... uwb_read"
+	@echo "... uwb_read_node"
+	@echo "... uwb_lib"
 .PHONY : help
 
 

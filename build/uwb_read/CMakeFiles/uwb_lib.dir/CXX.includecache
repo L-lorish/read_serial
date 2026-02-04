@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/linyuan/experiment/read_serial/src/uwb_read/include/uwb_read/lib.hpp
+string
+-
+
+/home/linyuan/experiment/read_serial/src/uwb_read/src/lib.cpp
+uwb_read/lib.hpp
+/home/linyuan/experiment/read_serial/src/uwb_read/src/uwb_read/lib.hpp
+sstream
+-
+stdexcept
+-
+

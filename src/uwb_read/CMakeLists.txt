@@ -150,10 +150,10 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
-add_library(uwb_lib lib.cpp);
+add_library(uwb_lib src/lib.cpp)
 target_include_directories(uwb_lib PUBLIC include ${catkin_INCLUDE_DIRS})
 # 因为是PUBLIC, 如果后续有可执行文件链接uwb_lib的话，相当于INCLUDE它的头文件
-target_link_libraries(uwb_lib ${catkin_LIBRARIES});
+target_link_libraries(uwb_lib ${catkin_LIBRARIES})
 
 add_executable(uwb_read_node src/uwb_read.cpp)
 target_link_libraries(uwb_read_node PRIVATE ${catkin_LIBRARIES} uwb_lib)

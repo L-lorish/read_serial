@@ -3,6 +3,6 @@ prefix=/home/linyuan/experiment/read_serial/devel
 Name: uwb_read
 Description: Description of uwb_read
 Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
+Cflags: -I/home/linyuan/experiment/read_serial/src/uwb_read/include
+Libs: -L${prefix}/lib -luwb_lib
+Requires: my_msgs roscpp std_msgs
