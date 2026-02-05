@@ -132,6 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/linyuan/experiment/read_serial/build/gtest/cmake_install.cmake")
   include("/home/linyuan/experiment/read_serial/build/my_msgs/cmake_install.cmake")
+  include("/home/linyuan/experiment/read_serial/build/uwb_plot/cmake_install.cmake")
   include("/home/linyuan/experiment/read_serial/build/uwb_read/cmake_install.cmake")
 
 endif()

@@ -1,0 +1,8 @@
+prefix=/home/linyuan/experiment/read_serial/install
+
+Name: uwb_plot
+Description: Description of uwb_plot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

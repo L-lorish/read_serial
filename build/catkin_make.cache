@@ -1,2 +1,2 @@
-my_msgs:uwb_read
+my_msgs:uwb_plot:uwb_read
 -DCATKIN_DEVEL_PREFIX=/home/linyuan/experiment/read_serial/devel -DCMAKE_INSTALL_PREFIX=/home/linyuan/experiment/read_serial/install -G Unix Makefiles

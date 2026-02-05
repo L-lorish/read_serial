@@ -19,7 +19,8 @@ bool extractDoubleField(const std::string& s, const std::string& key, double& ou
     size_t end = s.find(",",pos);
     if (end == std::string::npos)
     {
-        return false;
+        end = s.find(",", pos);
+        if (end == std::string::npos) return false;
     }
 
     const std::string num_str = s.substr(pos, end - pos);

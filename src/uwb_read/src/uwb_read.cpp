@@ -71,7 +71,7 @@ int main(int argc, char** argv)
 
         if (n > 0)
         {
-            std::string s(buffer);
+            std::string s(buffer, n);
 
             double a = 0.0, d = 0.0;
             bool ok_a = extractDoubleField(s, "a", a);
@@ -90,6 +90,11 @@ int main(int argc, char** argv)
                 ROS_WARN("Failed to extract fields from: %s", s.c_str());
             }
         }
+
+        // if (n > 0)
+        // {
+        //     ROS_INFO_STREAM(buffer);
+        // }
 
         ros::spinOnce();
         rate.sleep();

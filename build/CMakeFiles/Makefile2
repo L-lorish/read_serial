@@ -55,6 +55,7 @@ CMAKE_BINARY_DIR = /home/linyuan/experiment/read_serial/build
 # The main recursive "all" target.
 all: gtest/all
 all: my_msgs/all
+all: uwb_plot/all
 all: uwb_read/all
 
 .PHONY : all
@@ -62,6 +63,7 @@ all: uwb_read/all
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
 preinstall: my_msgs/preinstall
+preinstall: uwb_plot/preinstall
 preinstall: uwb_read/preinstall
 
 .PHONY : preinstall
@@ -74,6 +76,7 @@ clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: my_msgs/clean
+clean: uwb_plot/clean
 clean: uwb_read/clean
 
 .PHONY : clean
@@ -179,6 +182,24 @@ my_msgs/clean: my_msgs/CMakeFiles/my_msgs_genpy.dir/clean
 my_msgs/clean: my_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 .PHONY : my_msgs/clean
+
+#=============================================================================
+# Directory level rules for directory uwb_plot
+
+# Recursive "all" directory target.
+uwb_plot/all:
+
+.PHONY : uwb_plot/all
+
+# Recursive "preinstall" directory target.
+uwb_plot/preinstall:
+
+.PHONY : uwb_plot/preinstall
+
+# Recursive "clean" directory target.
+uwb_plot/clean:
+
+.PHONY : uwb_plot/clean
 
 #=============================================================================
 # Directory level rules for directory uwb_read
